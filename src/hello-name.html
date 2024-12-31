@@ -1,0 +1,37 @@
+<div>
+    <h4>Hello,${name}</h4>
+    <hr>
+    <p>
+        双向绑定.bind: <input type="text" value.bind="name">
+        绑定为空则会使用驼峰法默认绑定值: <input type="text" value.bind="">
+    </p>
+    <hr>
+    <p>绑定关键字：
+        <p>${firstName},${middleName},${lastName}</p>
+        <input type="text" value.bind="firstName" />
+        <input type="text" value.from-view="middleName" />
+        <input type="text" value.two-way="lastName" />
+
+        <p>${firstName2},${middleName2},${lastName2}</p>
+        <input type="text" value.to-view="firstName2" />
+        <input type="text" value.one-time="middleName2" />
+        <!-- <input type="text" value.one-way="lastName2" /> -->
+
+    </p>
+    <hr>
+    <p>图像绑定：
+        <img src.bind="imageSrc" alt.bind="altValue" />
+    </p>
+    <hr>
+    <p>禁用属性：
+        <button disabled.bind="!disableButton">enabled button</button>
+        <button disabled.bind="disableButton">disabled button</button>
+    </p>
+    <hr>
+    <p>innerHTML 和 TextContent:<br>
+        innerHTML: <div innerhtml.bind="content"></div>
+        TextContent: <div textcontent.bind="content"></div>
+    </p>
+    <hr>
+
+</div>
